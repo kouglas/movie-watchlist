@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* layout */
+
+hr{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    color: #E5E7EB;
+}
+
+/* buttons */
+.plus-minus {
+    filter: invert(100%);
+}

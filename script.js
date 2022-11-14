@@ -41,7 +41,7 @@ searchButton.addEventListener('click', async function() {
         const movieResponse = await fetch(`https://www.omdbapi.com/?apikey=3d08a817&i=${i.imdbID}`)
         const movieData = await movieResponse.json()
 
-
+        // minus icon needs class="plus-minus" for styling 
         // dictate how we want
         // the movie data to display
 
@@ -49,15 +49,18 @@ searchButton.addEventListener('click', async function() {
             <div id="movies" class="movies-container">
                 <img src="${i.Poster}" class="poster">
                     <div class="movies-display">
-                        <p>${i.Title} <span id="rating">⭐</p>
+                        <p>${i.Title} <span id="rating"><img id="star" src="/icons/star.png">${movieData.imdbRating}</p>
                         <div>
                         <span class="movie-length">${movieData.Runtime}</span> <span id="genre">
-                        ${movieData.Genre}</span
+                        ${movieData.Genre}<img class="plus-minus" src="/icons/plus.png"></span>
                         </div>
+                        
 
                         <p id="plot">${movieData.Plot}</p>
                     </div>
             </div>
+
+            <hr></hr>
         
         `
     }
