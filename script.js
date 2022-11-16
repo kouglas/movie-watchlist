@@ -52,7 +52,7 @@ searchButton.addEventListener('click', async function() {
                         <p>${i.Title} <span id="rating"><img id="star" src="/icons/star.png">${movieData.imdbRating}</p>
                         <div>
                         <span class="movie-length">${movieData.Runtime}</span> <span id="genre">
-                        ${movieData.Genre}<img class="plus-minus" src="/icons/plus.png"></span>
+                        ${movieData.Genre}<button id="add-watchlist"><img class="plus-minus" src="/icons/plus.png"> Watchlist </button></span>
                         </div>
                         
 
