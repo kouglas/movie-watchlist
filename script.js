@@ -14,7 +14,11 @@ const titleInput = document.getElementById('title-input') //movieName
 const searchButton = document.getElementById('search-button') //searchButton
 const movieSearchResults = document.getElementById('search-results') //movieData
 const noMovieResult = document.getElementById('no-results') //moviesEmptyList 
-// let key = '3d08a817'
+const addWatchlist = document.getElementById('watchlistBtn')
+
+
+
+
 
 searchButton.addEventListener('click', async function() {
     // empty variable to hold 
@@ -49,10 +53,10 @@ searchButton.addEventListener('click', async function() {
             <div id="movies" class="movies-container">
                 <img src="${i.Poster}" class="poster">
                     <div class="movies-display">
-                        <p>${i.Title} <span id="rating"><img id="star" src="/icons/star.png">${movieData.imdbRating}</p>
-                        <div>
+                        <p id="movie-title">${i.Title} <span id="rating"><img id="star" src="/icons/star.png"></span><span class="rating">${movieData.imdbRating}</span></p>
+                        <div id="movie-details">
                         <span class="movie-length">${movieData.Runtime}</span> <span id="genre">
-                        ${movieData.Genre}<button id="add-watchlist"><img class="plus-minus" src="/icons/plus.png"> Watchlist </button></span>
+                        ${movieData.Genre}<button data-movie="${movieData.imdbID}" id="watchlistBtn"><img class="plus-minus" src="/icons/plus.png"> Watchlist </button></span>
                         </div>
                         
 
