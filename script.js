@@ -14,7 +14,7 @@ const titleInput = document.getElementById('title-input') //movieName
 const searchButton = document.getElementById('search-button') //searchButton
 const movieSearchResults = document.getElementById('search-results') //movieData
 const noMovieResult = document.getElementById('no-results') //moviesEmptyList 
-const addWatchlist = document.getElementById('watchlistBtn')
+// const addWatchlist = document.getElementById('watchlistBtn')
 
 
 
@@ -72,3 +72,12 @@ searchButton.addEventListener('click', async function() {
     movieSearchResults.innerHTML = moviesDisplayList
 })
 
+
+// you wanted to grab the watchListBtn and then implement saving movies to local storage
+// this may be the most direct solution you could find but really didn't feel like
+// implementing that sh*t 
+// https://stackoverflow.com/questions/30601620/adding-an-event-listener-to-an-element-that-doesnt-exist-yet-in-vanilla-javascr
+document.addEventListener('click', addWatchList)
+    function addWatchList(event){
+
+    }
