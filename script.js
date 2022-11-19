@@ -81,3 +81,5 @@ document.addEventListener('click', addWatchList)
     function addWatchList(event){
 
     }
+
+    // please fix
