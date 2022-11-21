@@ -83,3 +83,6 @@ document.addEventListener('click', addWatchList)
     }
 
     // please fix
+
+    //still needs to be fixed
+    
